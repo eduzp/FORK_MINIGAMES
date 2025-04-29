@@ -1,0 +1,6 @@
+author: eduzp
+name: zSkywars
+version: Twilight Version
+depend: [zCore]
+
+main: mc.twilight.skywars.Main

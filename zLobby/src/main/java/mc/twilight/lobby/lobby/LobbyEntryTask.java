@@ -1,0 +1,13 @@
+package mc.twilight.lobby.lobby;
+
+import org.bukkit.scheduler.BukkitRunnable;
+
+import static mc.twilight.lobby.lobby.Lobby.QUERY;
+
+public class LobbyEntryTask extends BukkitRunnable {
+  
+  @Override
+  public void run() {
+    QUERY.forEach(Lobby::fetch);
+  }
+}

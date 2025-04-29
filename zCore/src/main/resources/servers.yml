@@ -1,0 +1,40 @@
+title: 'Modos de Jogo'
+rows: 5
+disabled-slots: [5]
+items:
+  lobby:
+    slot: 3
+    icon: 'BOOKSHELF : 1 : nome>&6Lobby Principal : desc>&e► Clique para conectar!'
+    max-players: 50
+    servernames:
+      - 'ascenty-01.destinyhost.com.br:25741 ; lobby'
+  ajuda:
+    slot: 5
+    icon: 'DIAMOND : 1 : nome>&bContribua com a &l&5TWILIGHTMC : desc>  \n  &7Você pode ajudar a TWILIGHT  \n  &7tornando-se &dMYSTIC &7e adquirindo  \n  &7pacotes de &fCash&7!  \n \n  &7Além de ajudar a manter a rede  \n  &7online, você ainda terá acesso  \n  &7a vários &bbenefícios&7!'
+    max-players: 50
+    servernames:
+      - 'localhost:4232 ; ajuuda'
+  skywars:
+    slot: 20
+    icon: 'GRASS : 1 : nome>&aSky Wars &b&lATUALIZADO! : desc>\n  &eConfira a atualização! \n  &aONLINE \n \n  &7Você tem medo de altura? Então este\n  &7jogo não é para você! No Sky Wars, você\n  &7deverá eliminar os seus adversários com\n  &7a ajuda de diversos Kits e Habilidades.\n \n  &7▪ &fSolo\n  &7▪ &fDupla\n  &7▪ &fRanked\n \n&aClique para conectar!\n&7{players} jogando.'
+    max-players: 50
+    servernames:
+      - 'ascenty-01.destinyhost.com.br:25650 ; skywars'
+  bedwars:
+    slot: 22
+    icon: 'BED : 1 : nome>&aBed Wars &b&lNOVIDADE : desc>\n  &eConfira a atualização&e:\n  &btwilightmc\n \n  &7▪ &dReconexão\n  &7▪ &dOrganizador de Hotbar\n  &7▪ &dDistribuição igualitária de drops\n \n  &7Este jogo é de tirar o sono! O objetivo\n  &7é simples e curioso, destruir a cama de\n  &7seus inimigos e proteger a sua. \n  \n  &7▪ &fSolo\n  &7▪ &fDupla\n  &7▪ &fTrio\n  &7▪ &fQuarteto\n \n&aClique para conectar!\n&7{players} jogando.'
+    max-players: 50
+    servernames:
+      - 'ascenty-01.destinyhost.com.br:25862 ; bedwars'
+  duels:
+    slot: 24
+    icon: 'IRON_SWORD : 1 : nome>&k&aDuels &c&lDESENVOLVIMENTO!  : desc>\n  &7Prepare-se para balancear muito bem sua defesa\n  &7com seu ataque! Neste minigame.\n \n&aClique para conectar!\n&7{players} jogando.'
+    max-players: 50
+    servernames:
+      - 'localhost:4232 ; duels'
+  discord:
+    slot: 40
+    icon: 'SKULL_ITEM:3 : 1 : skin>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzg3M2MxMmJmZmI1MjUxYTBiODhkNWFlNzVjNzI0N2NiMzlhNzVmZjFhODFjYmU0YzhhMzliMzExZGRlZGEifX19 : 1 : nome>&9&lDISCORD : desc>\n  &7Se junte a nossa comunidade.\n \n  &a◦ &fTorneios\n  &a◦ &fSorteios\n  &a◦ &fReports\n  &a◦ &fCompras\n  &a◦ &fEntre Outros...\n \n &a◦ &l&bhttps://discord.gg/ytEKYygjKq'
+    max-players: 50
+    servernames:
+      - 'localhost:4232 ; info'

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="zCore">
+    <output-path>D:/zPlugins</output-path>
+    <root id="archive" name="zCore.jar">
+      <element id="module-output" name="zCore" />
+    </root>
+  </artifact>
+</component>

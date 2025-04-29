@@ -1,0 +1,154 @@
+package mc.twilight.bedwars.cosmetics.types;
+
+import mc.twilight.bedwars.Language;
+import mc.twilight.bedwars.Main;
+import mc.twilight.bedwars.hook.container.SelectedContainer;
+import mc.twilight.bedwars.cosmetics.Cosmetic;
+import mc.twilight.bedwars.cosmetics.CosmeticType;
+import mc.twilight.bedwars.game.BedWars;
+import mc.twilight.core.cash.CashManager;
+import mc.twilight.core.game.GameState;
+import mc.twilight.core.libraries.npclib.NPCLibrary;
+import mc.twilight.core.libraries.npclib.api.npc.NPC;
+import mc.twilight.core.player.Profile;
+import mc.twilight.core.player.role.Role;
+import mc.twilight.core.plugin.config.KConfig;
+import mc.twilight.core.plugin.logger.KLogger;
+import mc.twilight.core.utils.BukkitUtils;
+import mc.twilight.core.utils.StringUtils;
+import mc.twilight.core.utils.enums.EnumRarity;
+import mc.twilight.core.utils.particles.ParticleEffect;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.Plugin;
+
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.logging.Level;
+
+import static org.bukkit.Bukkit.getPluginManager;
+
+public class FallEffect extends Cosmetic implements Listener {
+  
+  public static final KLogger LOGGER = ((KLogger) Main.getInstance().getLogger()).getModule("FALL_EFFECT");
+  private String name;
+  private String icon;
+  private ParticleEffect particle;
+  
+  public FallEffect(long id, EnumRarity rarity, double coins, long cash, String permission, String name, String icon, ParticleEffect particle) {
+    super(id, CosmeticType.FALL_EFFECT, coins, permission);
+    this.name = name;
+    this.icon = icon;
+    this.particle = particle;
+    this.rarity = rarity;
+    this.cash = cash;
+    
+    try {
+      getPluginManager().getClass().getDeclaredMethod("registerEvents", Listener.class, Plugin.class)
+          .invoke(getPluginManager(), this, Main.getInstance());
+    } catch (Exception exception) {
+      LOGGER.log(Level.WARNING, "Ocorreu um erro ao registar o evento: ", exception);
+    }
+  }
+  
+  public static void setupFallEffects() {
+    KConfig config = Main.getInstance().getConfig("cosmetics", "falleffects");
+    
+    for (String key : config.getKeys(false)) {
+      long id = config.getInt(key + ".id");
+      double coins = config.getDouble(key + ".coins");
+      if (!config.contains(key + ".cash")) {
+        config.set(key + ".cash", getAbsentProperty("falleffects", key + ".cash"));
+      }
+      long cash = config.getInt(key + ".cash", 0);
+      String permission = config.getString(key + ".permission");
+      String name = config.getString(key + ".name");
+      String icon = config.getString(key + ".icon");
+      if (!config.contains(key + ".rarity")) {
+        config.set(key + ".rarity", getAbsentProperty("falleffects", key + ".rarity"));
+      }
+      ParticleEffect particle;
+      try {
+        particle = ParticleEffect.valueOf(config.getString(key + ".particle"));
+      } catch (Exception ex) {
+        Bukkit.getScheduler().scheduleSyncDelayedTask(Main.getInstance(), () -> LOGGER.warning("A partícula \"" + config.getString(key + ".particle") + "\" nao foi encontrada."));
+        continue;
+      }
+      
+      new FallEffect(id, EnumRarity.fromName(config.getString(key + ".rarity")), coins, cash, permission, name, icon, particle);
+    }
+  }
+  
+  @Override
+  public String getName() {
+    return this.name;
+  }
+  
+  @EventHandler
+  public void onEntityDamageEvent(EntityDamageEvent evt) {
+    if (!(evt.getEntity() instanceof Player)) {
+      return;
+    }
+    NPC npc = NPCLibrary.getNPC(evt.getEntity());
+    if (npc != null) {
+      return;
+    }
+    Player player = (Player) evt.getEntity();
+    Profile profile = Profile.getProfile(player.getName());
+    BedWars game = profile.getGame(BedWars.class);
+    if (player.getNoDamageTicks() < 1 && game != null && game.getState() == GameState.EMJOGO
+        && !game.isSpectator(player) && isSelected(profile) && canBuy(player) && has(profile)
+        && evt.getCause() != null && evt.getCause() == EntityDamageEvent.DamageCause.FALL) {
+      for (int i = 0; i < 5; i++) {
+        // Enviar partícula.
+        game.listPlayers().forEach(viewer -> getParticle().display(ThreadLocalRandom.current().nextFloat() * 2.0F,
+            0.1F, ThreadLocalRandom.current().nextFloat() * 2.0F,
+            1.0F, 3, player.getLocation(), viewer));
+      }
+    }
+  }
+  
+  public ParticleEffect getParticle() {
+    return this.particle;
+  }
+  
+  @Override
+  public EnumRarity getRarity() {
+    return this.rarity;
+  }
+  
+  @Override
+  public ItemStack getIcon(Profile profile) {
+    double coins = profile.getCoins("zCoreBedWars");
+    long cash = profile.getStats("zCoreProfile", "cash");
+    boolean has = this.has(profile);
+    boolean canBuy = this.canBuy(profile.getPlayer());
+    boolean isSelected = this.isSelected(profile);
+    if (isSelected && !canBuy) {
+      isSelected = false;
+      profile.getAbstractContainer("zCoreBedWars", "selected", SelectedContainer.class).setSelected(getType(), 0);
+    }
+    
+    Role role = Role.getRoleByPermission(this.getPermission());
+    String color = has ?
+        (isSelected ? Language.cosmetics$color$selected : Language.cosmetics$color$unlocked) :
+        (coins >= this.getCoins() || (CashManager.CASH && cash >= this.getCash())) && canBuy ? Language.cosmetics$color$canbuy : Language.cosmetics$color$locked;
+    String desc = (has && canBuy ?
+        Language.cosmetics$fall_effect$icon$has_desc$start.replace("{has_desc_status}", isSelected ? Language.cosmetics$icon$has_desc$selected : Language.cosmetics$icon$has_desc$select) :
+        canBuy ?
+            Language.cosmetics$fall_effect$icon$buy_desc$start
+                .replace("{buy_desc_status}", (coins >= this.getCoins() || (CashManager.CASH && cash >= this.getCash())) ? Language.cosmetics$icon$buy_desc$click_to_buy : Language.cosmetics$icon$buy_desc$enough) :
+            Language.cosmetics$fall_effect$icon$perm_desc$start
+                .replace("{perm_desc_status}", (role == null ? Language.cosmetics$icon$perm_desc$common : Language.cosmetics$icon$perm_desc$role.replace("{role}", role.getName()))))
+        .replace("{name}", this.name).replace("{rarity}", this.getRarity().getName()).replace("{coins}", StringUtils.formatNumber(this.getCoins())).replace("{cash}", StringUtils.formatNumber(this.getCash()));
+    ItemStack item = BukkitUtils.deserializeItemStack(this.icon + " : nome>" + color + this.name + " : desc>" + desc);
+    if (isSelected) {
+      BukkitUtils.putGlowEnchantment(item);
+    }
+    
+    return item;
+  }
+}

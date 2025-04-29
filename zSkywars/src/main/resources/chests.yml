@@ -1,0 +1,93 @@
+solo:
+  refillChest: solor
+  randomSlots: true
+  items:
+    - '50; COOKED_BEEF : 16'
+    - '50; COOKED_BEEF : 8'
+    - '100; WATER_BUCKET : 1'
+    - '100; IRON_AXE : 1'
+    - '100; COOKED_BEEF : 8'
+    - '100; EGG : 16'
+    - '35; POTION:16418 : 1'
+    - '35; POTION:16417 : 1'
+solo2:
+  refillChest: solor2
+  randomSlots: true
+  items:
+    - '100; FISHING_ROD : 1'
+    - '50; COOKED_BEEF : 16'
+    - '50; COOKED_BEEF : 8'
+    - '100; COOKED_BEEF : 8'
+    - '100; WOOD : 32'
+    - '100; STONE : 32'
+    - '100; IRON_PICKAXE : 1'
+solor:
+  refillChest: ''
+  randomSlots: true
+  items:
+    - '100; POTION:16418 : 1'
+    - '100; DIAMOND_CHESTPLATE : 1 : encantar>PROTECTION_ENVIRONMENTAL:4'
+    - '100; DIAMOND_LEGGINGS : 1 : encantar>PROTECTION_ENVIRONMENTAL:4'
+    - '100; DIAMOND_SWORD : 1 : encantar>DAMAGE_ALL:2'
+    - '100; WOOD : 32'
+    - '30; ENDER_PEARL : 5'
+solor2:
+  refillChest: ''
+  randomSlots: true
+  items:
+    - '100; POTION:16417 : 1'
+    - '100; DIAMOND_HELMET : 1 : encantar>PROTECTION_ENVIRONMENTAL:4'
+    - '100; DIAMOND_BOOTS : 1 : encantar>PROTECTION_ENVIRONMENTAL:4'
+    - '100; ARROW : 32'
+    - '100; BOW : 1 : encantar>ARROW_DAMAGE:3'
+    - '100; STONE : 32'
+sfeast:
+  refillChest: sfeastr
+  randomSlots: true
+  items:
+    - '55; POTION:16418 : 1'
+    - '55; POTION:16417 : 1'
+    - '10; DIAMOND_HELMET : 1 : encantar>PROTECTION_ENVIRONMENTAL:4'
+    - '10; DIAMOND_CHESTPLATE : 1 : encantar>PROTECTION_ENVIRONMENTAL:4'
+    - '10; DIAMOND_LEGGINGS : 1 : encantar>PROTECTION_ENVIRONMENTAL:4'
+    - '10; DIAMOND_BOOTS : 1 : encantar>PROTECTION_ENVIRONMENTAL:4'
+    - '70; ARROW : 32'
+    - '40; DIAMOND_SWORD : 1'
+    - '20; DIAMOND_SWORD : 1 : encantar>DAMAGE_ALL:1'
+    - '12; DIAMOND_SWORD : 1 : encantar>DAMAGE_ALL:1\nFIRE_ASPECT:2'
+    - '50; BOW : 1 : encantar>ARROW_DAMAGE:1'
+    - '45; BOW : 1 : encantar>ARROW_DAMAGE:2'
+    - '45; BOW : 1 : encantar>ARROW_DAMAGE:3'
+    - '35; BOW : 1 : encantar>ARROW_DAMAGE:4'
+    - '20; BOW : 1 : encantar>ARROW_DAMAGE:5'
+    - '90; STONE : 32'
+    - '90; WOOD : 32'
+    - '15; ENDER_PEARL : 5'
+    - '40; GOLDEN_APPLE : 5'
+    - '70; 145 : 1'
+    - '70; 384 : 32'
+    - '90; COMPASS : 1 : nome>&aLocalizador'
+sfeastr:
+  refillChest: ''
+  randomSlots: true
+  items:
+    - '50; POTION:16418 : 1'
+    - '50; POTION:16417 : 1'
+    - '45; DIAMOND_HELMET : 1 : encantar>PROTECTION_ENVIRONMENTAL:4'
+    - '45; DIAMOND_CHESTPLATE : 1 : encantar>PROTECTION_ENVIRONMENTAL:4'
+    - '45; DIAMOND_LEGGINGS : 1 : encantar>PROTECTION_ENVIRONMENTAL:4'
+    - '45; DIAMOND_BOOTS : 1 : encantar>PROTECTION_ENVIRONMENTAL:4'
+    - '70; ARROW : 32'
+    - '40; BOW : 1 : encantar>ARROW_DAMAGE:3'
+    - '60; DIAMOND_SWORD : 1 : encantar>DAMAGE_ALL:2'
+    - '80; WOOD : 32'
+    - '80; STONE : 32'
+    - '50; ENDER_PEARL : 5'
+    - '80; GOLDEN_APPLE : 5'
+    - '60; 145 : 1'
+    - '60; 384 : 32'
+    - '80; COMPASS : 1 : nome>&aLocalizador'
+solo1:
+  refillChest: solo1
+  randomSlots: true
+  items: []

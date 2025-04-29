@@ -1,0 +1,14 @@
+# Título do menu
+title: 'Upgrades'
+# Colunas do menu
+rows: 3
+options:
+ info_slot: 19
+ info: 'PAPER : 1 : nome>&aInformações : desc>&fCash: &b%zCore_cash%'
+upgrades:
+ MVP:
+  cash: 10000
+  slot: 15
+  role_permission: 'role.mvp'
+  icon: '35:1 : 1 : nome>&6MVP : desc>&7Evolua seu vip para &6MVP\n&7e tenha vantagens unicas!\n \n&fPreço: &b{cash} Cash'
+  cmd: 'lp user {player} parent set mvp'

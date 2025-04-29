@@ -1,0 +1,6 @@
+author: eduzp
+name: zBedwars
+version: Twilight Version
+depend: [zCore]
+
+main: mc.twilight.bedwars.Main

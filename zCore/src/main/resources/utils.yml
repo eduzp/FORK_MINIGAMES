@@ -1,0 +1,32 @@
+cash: true
+bungeecord: true
+queue: false
+fake:
+  role:
+    - 'membro'
+    - 'mystic'
+    - 'galaxy'
+    - 'twilight'
+  randoms:
+    - 'beta'
+    - 'overlord'
+    - 'pombest'
+    - 'deathopen'
+    - 'Ban0909'
+    - 'traveler'
+  kick-apply: '&aSeu nick foi alterado para: {fake}'
+  kick-remove: '&aSeu nick foi resetado!'
+party:
+  size:
+    role_diretor: 20
+    role_admin: 20
+    role_moderador: 20
+    role_ajudante: 20
+    role_creator: 20
+    role_twilight: 20
+    role_galaxy: 15
+    role_mystic: 10
+    role_2025: 5
+    role_winner: 5
+    role_beta: 5
+    role_membro: 5

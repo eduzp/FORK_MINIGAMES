@@ -1,0 +1,6 @@
+author: eduzp
+name: zClans
+version: Twilight Version
+depend: [zCore]
+
+main: mc.twilight.clans.Main

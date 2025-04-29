@@ -1,0 +1,61 @@
+roles:
+ diretor:
+  name: '&6DIRETOR'
+  prefix: '&6&lDIRETOR&6 '
+  permission: 'role.diretor'
+  # nao esconder no lobby
+  alwaysvisible: true
+ admin:
+  name: '&4ADMIN'
+  prefix: '&4&lADMIN&4 '
+  permission: 'role.admin'
+  # nao esconder no lobby
+  alwaysvisible: true
+ moderador:
+  name: '&2MODERADOR'
+  prefix: '&2&lMODERADOR&2 '
+  permission: 'role.moderador'
+  alwaysvisible: true
+ ajudante:
+  name: '&eAJUDANTE'
+  prefix: '&e&lAJUDANTE&e '
+  permission: 'role.ajudante'
+  alwaysvisible: true
+ creator:
+  name: '&bCREATOR'
+  prefix: '&b&lCREATOR&b '
+  permission: 'role.creator'
+  alwaysvisible: true
+ twilight:
+  name: '&fTWILIGHT'
+  prefix: '&f&lTWIlLIGHT&f '
+  permission: 'role.twilight'
+ galaxy:
+  name: '&5GALAXY'
+  prefix: '&5&lGALAXY&5 '
+  permission: 'role.galaxy'
+ mystic:
+  name: '&dMYSTIC'
+  prefix: '&d&lMYSTIC&d '
+  permission: 'role.mystic'
+ 2025:
+  name: '&b2025'
+  prefix: '&b&l2025&b '
+  permission: 'role.2025'
+  broadcast: false
+ winner:
+  name: '&3WINNER'
+  prefix: '&3&lWINNER&3 '
+  permission: 'role.winner'
+  broadcast: false
+ beta:
+  name: '&1BETA'
+  prefix: '&1&lBETA&1 '
+  permission: 'role.beta'
+  broadcast: false
+ membro:
+  name: '&7MEMBRO'
+  prefix: '&7'
+  permission: 'role.membro'
+  # nao enviar avisos ao entrar no lobby
+  broadcast: false

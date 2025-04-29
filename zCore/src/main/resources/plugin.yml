@@ -1,0 +1,6 @@
+author: eduzp
+name: zCore
+version: 1.0
+depend: [ProtocolLib, PlaceholderAPI]
+
+main: mc.twilight.core.Core

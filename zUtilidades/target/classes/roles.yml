@@ -1,0 +1,52 @@
+title: 'Setar cargo para {player}'
+rows_auto: true
+rows: 3
+roles:
+  diretor:
+    icon: 'WOOL:5 : 1 : nome>{role} : desc>&7Setar o cargo de {player}\n&7para {role}'
+    prefix: '§6§lDIRETOR§6 '
+    cmd: 'lp user {player} parent set master'
+  admin:
+    icon: 'WOOL:14 : 1 : nome>{role} : desc>&7Setar o cargo de {player}\n&7para {role}'
+    prefix: '§4§lADMIN§4 '
+    cmd: 'lp user {player} parent set admin'
+  moderador:
+    icon: 'WOOL:13 : 1 : nome>{role} : desc>&7Setar o cargo de {player}\n&7para {role}'
+    prefix: '§2§lMODERADOR§2 '
+    cmd: 'lp user {player} parent set moderador'
+  ajudante:
+    icon: 'WOOL:4 : 1 : nome>{role} : desc>&7Setar o cargo de {player}\n&7para {role}'
+    prefix: '§e§lAJUDANTE§e '
+    cmd: 'lp user {player} parent set ajudante'
+  creator:
+    icon: 'WOOL:3 : 1 : nome>{role} : desc>&7Setar o cargo de {player}\n&7para {role}'
+    prefix: '§b§lCREATOR§b '
+    cmd: 'lp user {player} parent set creator'
+  twilight:
+    icon: 'WOOL:0 : 1 : nome>{role} : desc>&7Setar o cargo de {player}\n&7para {role}'
+    prefix: '§f§lTWIlLIGHT§f '
+    cmd: 'lp user {player} parent set twilight'
+  galaxy:
+    icon: 'WOOL:10 : 1 : nome>{role} : desc>&7Setar o cargo de {player}\n&7para {role}'
+    prefix: '§5§lGALAXY§5 '
+    cmd: 'lp user {player} parent set galaxy'
+  mystic:
+    icon: 'WOOL:6 : 1 : nome>{role} : desc>&7Setar o cargo de {player}\n&7para {role}'
+    prefix: '§d§lMYSTIC§d '
+    cmd: 'lp user {player} parent set mystic'
+  2025:
+    icon: 'WOOL:3 : 1 : nome>{role} : desc>&7Setar o cargo de {player}\n&7para {role}'
+    prefix: '§b§l2025§b '
+    cmd: 'lp user {player} parent set 2025'
+  winner:
+    icon: 'WOOL:9 : 1 : nome>{role} : desc>&7Setar o cargo de {player}\n&7para {role}'
+    prefix: '§3§lWINNER§3 '
+    cmd: 'lp user {player} parent set winner'
+  beta:
+    icon: 'WOOL:11 : 1 : nome>{role} : desc>&7Setar o cargo de {player}\n&7para {role}'
+    prefix: '§1§lBETA§1 '
+    cmd: 'lp user {player} parent set beta'
+  membro:
+    icon: 'WOOL:7 : 1 : nome>{role} : desc>&7Setar o cargo de {player}\n&7para {role}'
+    prefix: '§7'
+    cmd: 'lp user {player} parent set membro'

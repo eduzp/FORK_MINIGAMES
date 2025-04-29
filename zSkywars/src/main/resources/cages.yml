@@ -1,0 +1,146 @@
+foguete:
+  id: 1
+  especial: fireworks
+  rarity: DIVINO
+  name: Lança Confete
+  permission: ''
+  icon: 'FIREWORK : 1'
+  blocks: '["-1.0; 0.0; -1.0; STEP; 15","-1.0; 0.0; 0.0; QUARTZ_BLOCK; 0","-1.0; 0.0;
+    1.0; STEP; 15","0.0; 0.0; -1.0; QUARTZ_BLOCK; 0","0.0; 0.0; 0.0; DISPENSER; 9","0.0;
+    0.0; 1.0; QUARTZ_BLOCK; 0","1.0; 0.0; -1.0; STEP; 15","1.0; 0.0; 0.0; QUARTZ_BLOCK;
+    0","1.0; 0.0; 1.0; STEP; 15","-1.0; 1.0; -1.0; STAINED_GLASS; 0","-1.0; 1.0; 0.0;
+    STAINED_GLASS; 0","-1.0; 1.0; 1.0; STAINED_GLASS; 0","0.0; 1.0; -1.0; STAINED_GLASS;
+    0","0.0; 1.0; 1.0; STAINED_GLASS; 0","1.0; 1.0; -1.0; STAINED_GLASS; 0","1.0;
+    1.0; 0.0; STAINED_GLASS; 0","1.0; 1.0; 1.0; STAINED_GLASS; 0","-1.0; 2.0; -1.0;
+    STAINED_GLASS; 0","-1.0; 2.0; 0.0; STAINED_GLASS; 0","-1.0; 2.0; 1.0; STAINED_GLASS;
+    0","0.0; 2.0; -1.0; STAINED_GLASS; 0","0.0; 2.0; 1.0; STAINED_GLASS; 0","1.0;
+    2.0; -1.0; STAINED_GLASS; 0","1.0; 2.0; 0.0; STAINED_GLASS; 0","1.0; 2.0; 1.0;
+    STAINED_GLASS; 0","-1.0; 3.0; -1.0; STAINED_GLASS; 0","-1.0; 3.0; 0.0; STAINED_GLASS;
+    0","-1.0; 3.0; 1.0; STAINED_GLASS; 0","0.0; 3.0; -1.0; STAINED_GLASS; 0","0.0;
+    3.0; 1.0; STAINED_GLASS; 0","1.0; 3.0; -1.0; STAINED_GLASS; 0","1.0; 3.0; 0.0;
+    STAINED_GLASS; 0","1.0; 3.0; 1.0; STAINED_GLASS; 0","-1.0; 4.0; -1.0; STAINED_GLASS;
+    0","-1.0; 4.0; 0.0; STAINED_GLASS; 0","-1.0; 4.0; 1.0; STAINED_GLASS; 0","0.0;
+    4.0; -1.0; STAINED_GLASS; 0","0.0; 4.0; 1.0; STAINED_GLASS; 0","1.0; 4.0; -1.0;
+    STAINED_GLASS; 0","1.0; 4.0; 0.0; STAINED_GLASS; 0","1.0; 4.0; 1.0; STAINED_GLASS;
+    0"]'
+Pântano:
+  id: 2
+  especial: nenhum
+  rarity: EPICO
+  name: Pântano
+  permission: ''
+  icon: '165 : 1'
+  blocks: '["-1.0; 0.0; -1.0; SLIME_BLOCK; 0","-1.0; 0.0; 0.0; SLIME_BLOCK; 0","-1.0;
+    0.0; 1.0; SLIME_BLOCK; 0","0.0; 0.0; -1.0; SLIME_BLOCK; 0","0.0; 0.0; 0.0; SLIME_BLOCK;
+    0","0.0; 0.0; 1.0; SLIME_BLOCK; 0","1.0; 0.0; -1.0; SLIME_BLOCK; 0","1.0; 0.0;
+    0.0; SLIME_BLOCK; 0","1.0; 0.0; 1.0; SLIME_BLOCK; 0","-1.0; 1.0; -1.0; STAINED_GLASS;
+    13","-1.0; 1.0; 0.0; STAINED_GLASS; 13","-1.0; 1.0; 1.0; STAINED_GLASS; 13","0.0;
+    1.0; -1.0; STAINED_GLASS; 13","0.0; 1.0; 1.0; STAINED_GLASS; 13","1.0; 1.0; -1.0;
+    STAINED_GLASS; 13","1.0; 1.0; 0.0; STAINED_GLASS; 13","1.0; 1.0; 1.0; STAINED_GLASS;
+    13","-1.0; 2.0; -1.0; SLIME_BLOCK; 0","-1.0; 2.0; 0.0; STAINED_GLASS; 13","-1.0;
+    2.0; 1.0; STAINED_GLASS; 13","0.0; 2.0; -1.0; STAINED_GLASS; 13","0.0; 2.0; 1.0;
+    STAINED_GLASS; 13","1.0; 2.0; -1.0; STAINED_GLASS; 13","1.0; 2.0; 0.0; STAINED_GLASS;
+    13","1.0; 2.0; 1.0; SLIME_BLOCK; 0","-1.0; 3.0; -1.0; SLIME_BLOCK; 0","-1.0; 3.0;
+    0.0; SLIME_BLOCK; 0","-1.0; 3.0; 1.0; STAINED_GLASS; 13","0.0; 3.0; -1.0; SLIME_BLOCK;
+    0","0.0; 3.0; 1.0; SLIME_BLOCK; 0","1.0; 3.0; -1.0; STAINED_GLASS; 13","1.0; 3.0;
+    0.0; SLIME_BLOCK; 0","1.0; 3.0; 1.0; SLIME_BLOCK; 0","-1.0; 4.0; -1.0; SLIME_BLOCK;
+    0","-1.0; 4.0; 0.0; SLIME_BLOCK; 0","-1.0; 4.0; 1.0; SLIME_BLOCK; 0","0.0; 4.0;
+    -1.0; SLIME_BLOCK; 0","0.0; 4.0; 0.0; SLIME_BLOCK; 0","0.0; 4.0; 1.0; SLIME_BLOCK;
+    0","1.0; 4.0; -1.0; SLIME_BLOCK; 0","1.0; 4.0; 0.0; SLIME_BLOCK; 0","1.0; 4.0;
+    1.0; SLIME_BLOCK; 0"]'
+Arco-Iris:
+  id: 3
+  especial: nenhum
+  rarity: DIVINO
+  name: Arco Iris
+  permission: ''
+  icon: '95:5 : 1'
+  blocks: '["-1.0; 0.0; -1.0; STAINED_GLASS; 11","-1.0; 0.0; 0.0; STAINED_GLASS; 10","-1.0;
+    0.0; 1.0; STAINED_GLASS; 9","0.0; 0.0; -1.0; STAINED_GLASS; 12","0.0; 0.0; 0.0;
+    STAINED_GLASS; 15","0.0; 0.0; 1.0; STAINED_GLASS; 8","1.0; 0.0; -1.0; STAINED_GLASS;
+    13","1.0; 0.0; 0.0; STAINED_GLASS; 14","1.0; 0.0; 1.0; STAINED_GLASS; 7","-1.0;
+    1.0; -1.0; STAINED_GLASS; 1","-1.0; 1.0; 0.0; STAINED_GLASS; 2","-1.0; 1.0; 1.0;
+    STAINED_GLASS; 4","0.0; 1.0; -1.0; STAINED_GLASS; 0","0.0; 1.0; 1.0; STAINED_GLASS;
+    5","1.0; 1.0; -1.0; STAINED_GLASS; 15","1.0; 1.0; 0.0; STAINED_GLASS; 14","1.0;
+    1.0; 1.0; STAINED_GLASS; 6","-1.0; 2.0; -1.0; STAINED_GLASS; 8","-1.0; 2.0; 0.0;
+    STAINED_GLASS; 9","-1.0; 2.0; 1.0; STAINED_GLASS; 10","0.0; 2.0; -1.0; STAINED_GLASS;
+    7","0.0; 2.0; 1.0; STAINED_GLASS; 12","1.0; 2.0; -1.0; STAINED_GLASS; 6","1.0;
+    2.0; 0.0; STAINED_GLASS; 5","1.0; 2.0; 1.0; STAINED_GLASS; 13","-1.0; 3.0; -1.0;
+    STAINED_GLASS; 14","-1.0; 3.0; 0.0; STAINED_GLASS; 15","-1.0; 3.0; 1.0; STAINED_GLASS;
+    0","0.0; 3.0; -1.0; STAINED_GLASS; 13","0.0; 3.0; 1.0; STAINED_GLASS; 1","1.0;
+    3.0; -1.0; STAINED_GLASS; 9","1.0; 3.0; 0.0; STAINED_GLASS; 3","1.0; 3.0; 1.0;
+    STAINED_GLASS; 2","-1.0; 4.0; -1.0; STAINED_GLASS; 12","-1.0; 4.0; 0.0; STAINED_GLASS;
+    4","-1.0; 4.0; 1.0; STAINED_GLASS; 5","0.0; 4.0; -1.0; STAINED_GLASS; 11","0.0;
+    4.0; 0.0; STAINED_GLASS; 0","0.0; 4.0; 1.0; STAINED_GLASS; 6","1.0; 4.0; -1.0;
+    STAINED_GLASS; 10","1.0; 4.0; 0.0; STAINED_GLASS; 8","1.0; 4.0; 1.0; STAINED_GLASS;
+    7"]'
+O-Fim:
+  id: 4
+  especial: nenhum
+  rarity: COMUM
+  name: O Fim
+  permission: ''
+  icon: '381 : 1'
+  blocks: '["-1.0; 0.0; -1.0; ENDER_PORTAL_FRAME; 7","-1.0; 0.0; 0.0; ENDER_STONE;
+    0","-1.0; 0.0; 1.0; ENDER_PORTAL_FRAME; 6","0.0; 0.0; -1.0; ENDER_STONE; 0","0.0;
+    0.0; 0.0; ENDER_STONE; 0","0.0; 0.0; 1.0; ENDER_STONE; 0","1.0; 0.0; -1.0; ENDER_PORTAL_FRAME;
+    6","1.0; 0.0; 0.0; ENDER_STONE; 0","1.0; 0.0; 1.0; ENDER_PORTAL_FRAME; 7","-1.0;
+    1.0; -1.0; NETHER_FENCE; 0","-1.0; 1.0; 0.0; BARRIER; 0","-1.0; 1.0; 1.0; NETHER_FENCE;
+    0","0.0; 1.0; -1.0; BARRIER; 0","0.0; 1.0; 1.0; BARRIER; 0","1.0; 1.0; -1.0; NETHER_FENCE;
+    0","1.0; 1.0; 0.0; BARRIER; 0","1.0; 1.0; 1.0; NETHER_FENCE; 0","-1.0; 2.0; -1.0;
+    NETHER_FENCE; 0","-1.0; 2.0; 0.0; BARRIER; 0","-1.0; 2.0; 1.0; NETHER_FENCE; 0","0.0;
+    2.0; -1.0; BARRIER; 0","0.0; 2.0; 1.0; BARRIER; 0","1.0; 2.0; -1.0; NETHER_FENCE;
+    0","1.0; 2.0; 0.0; BARRIER; 0","1.0; 2.0; 1.0; NETHER_FENCE; 0","-1.0; 3.0; -1.0;
+    NETHER_FENCE; 0","-1.0; 3.0; 0.0; BARRIER; 0","-1.0; 3.0; 1.0; NETHER_FENCE; 0","0.0;
+    3.0; -1.0; BARRIER; 0","0.0; 3.0; 1.0; BARRIER; 0","1.0; 3.0; -1.0; NETHER_FENCE;
+    0","1.0; 3.0; 0.0; BARRIER; 0","1.0; 3.0; 1.0; NETHER_FENCE; 0","-1.0; 4.0; -1.0;
+    ENDER_STONE; 0","-1.0; 4.0; 0.0; ENDER_STONE; 0","-1.0; 4.0; 1.0; ENDER_STONE;
+    0","0.0; 4.0; -1.0; ENDER_STONE; 0","0.0; 4.0; 0.0; ENDER_STONE; 0","0.0; 4.0;
+    1.0; ENDER_STONE; 0","1.0; 4.0; -1.0; ENDER_STONE; 0","1.0; 4.0; 0.0; ENDER_STONE;
+    0","1.0; 4.0; 1.0; ENDER_STONE; 0"]'
+Nether:
+  id: 5
+  especial: nenhum
+  rarity: RARO
+  name: Nether
+  permission: ''
+  icon: '112 : 1'
+  blocks: '["-1.0; 0.0; -1.0; NETHER_BRICK; 0","-1.0; 0.0; 0.0; NETHER_BRICK; 0","-1.0;
+    0.0; 1.0; NETHER_BRICK; 0","0.0; 0.0; -1.0; NETHER_BRICK; 0","0.0; 0.0; 0.0; NETHER_BRICK;
+    0","0.0; 0.0; 1.0; NETHER_BRICK; 0","1.0; 0.0; -1.0; NETHER_BRICK; 0","1.0; 0.0;
+    0.0; NETHER_BRICK; 0","1.0; 0.0; 1.0; NETHER_BRICK; 0","-1.0; 1.0; -1.0; NETHER_FENCE;
+    0","-1.0; 1.0; 0.0; STEP; 6","-1.0; 1.0; 1.0; NETHER_FENCE; 0","0.0; 1.0; -1.0;
+    STEP; 6","0.0; 1.0; 1.0; STEP; 6","1.0; 1.0; -1.0; NETHER_FENCE; 0","1.0; 1.0;
+    0.0; STEP; 6","1.0; 1.0; 1.0; NETHER_FENCE; 0","-1.0; 2.0; -1.0; NETHER_FENCE;
+    0","-1.0; 2.0; 1.0; NETHER_FENCE; 0","1.0; 2.0; -1.0; NETHER_FENCE; 0","1.0; 2.0;
+    1.0; NETHER_FENCE; 0","-1.0; 3.0; -1.0; NETHER_FENCE; 0","-1.0; 3.0; 0.0; BARRIER;
+    0","-1.0; 3.0; 1.0; NETHER_FENCE; 0","0.0; 3.0; -1.0; BARRIER; 0","0.0; 3.0; 1.0;
+    BARRIER; 0","1.0; 3.0; -1.0; NETHER_FENCE; 0","1.0; 3.0; 0.0; BARRIER; 0","1.0;
+    3.0; 1.0; NETHER_FENCE; 0","-1.0; 4.0; -1.0; STEP; 6","-1.0; 4.0; 0.0; NETHER_BRICK_STAIRS;
+    0","-1.0; 4.0; 1.0; STEP; 6","0.0; 4.0; -1.0; NETHER_BRICK_STAIRS; 2","0.0; 4.0;
+    0.0; NETHER_BRICK; 0","0.0; 4.0; 1.0; NETHER_BRICK_STAIRS; 3","1.0; 4.0; -1.0;
+    STEP; 6","1.0; 4.0; 0.0; NETHER_BRICK_STAIRS; 1","1.0; 4.0; 1.0; STEP; 6"]'
+Void:
+  id: 6
+  especial: void
+  rarity: EPICO
+  name: Void
+  permission: ''
+  icon: 'BEDROCK : 1'
+  blocks: '["-1.0; 0.0; -1.0; BEDROCK; 0","-1.0; 0.0; 0.0; BEDROCK; 0","-1.0; 0.0;
+    1.0; BEDROCK; 0","0.0; 0.0; -1.0; BEDROCK; 0","0.0; 0.0; 0.0; BEDROCK; 0","0.0;
+    0.0; 1.0; BEDROCK; 0","1.0; 0.0; -1.0; BEDROCK; 0","1.0; 0.0; 0.0; BEDROCK; 0","1.0;
+    0.0; 1.0; BEDROCK; 0","-1.0; 1.0; -1.0; SPRUCE_FENCE; 0","-1.0; 1.0; 0.0; SPRUCE_FENCE;
+    0","-1.0; 1.0; 1.0; SPRUCE_FENCE; 0","0.0; 1.0; -1.0; SPRUCE_FENCE; 0","0.0; 1.0;
+    1.0; SPRUCE_FENCE; 0","1.0; 1.0; -1.0; SPRUCE_FENCE; 0","1.0; 1.0; 0.0; SPRUCE_FENCE;
+    0","1.0; 1.0; 1.0; SPRUCE_FENCE; 0","-1.0; 2.0; -1.0; SPRUCE_FENCE; 0","-1.0;
+    2.0; 0.0; SPRUCE_FENCE; 0","-1.0; 2.0; 1.0; SPRUCE_FENCE; 0","0.0; 2.0; -1.0;
+    SPRUCE_FENCE; 0","0.0; 2.0; 1.0; SPRUCE_FENCE; 0","1.0; 2.0; -1.0; SPRUCE_FENCE;
+    0","1.0; 2.0; 0.0; SPRUCE_FENCE; 0","1.0; 2.0; 1.0; SPRUCE_FENCE; 0","-1.0; 3.0;
+    -1.0; SPRUCE_FENCE; 0","-1.0; 3.0; 0.0; SPRUCE_FENCE; 0","-1.0; 3.0; 1.0; SPRUCE_FENCE;
+    0","0.0; 3.0; -1.0; SPRUCE_FENCE; 0","0.0; 3.0; 1.0; SPRUCE_FENCE; 0","1.0; 3.0;
+    -1.0; SPRUCE_FENCE; 0","1.0; 3.0; 0.0; SPRUCE_FENCE; 0","1.0; 3.0; 1.0; SPRUCE_FENCE;
+    0","-1.0; 4.0; -1.0; BEDROCK; 0","-1.0; 4.0; 0.0; BEDROCK; 0","-1.0; 4.0; 1.0;
+    BEDROCK; 0","0.0; 4.0; -1.0; BEDROCK; 0","0.0; 4.0; 0.0; BEDROCK; 0","0.0; 4.0;
+    1.0; BEDROCK; 0","1.0; 4.0; -1.0; BEDROCK; 0","1.0; 4.0; 0.0; BEDROCK; 0","1.0;
+    4.0; 1.0; BEDROCK; 0"]'

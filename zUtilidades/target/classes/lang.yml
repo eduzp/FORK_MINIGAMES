@@ -1,0 +1,6 @@
+tell:
+ sender: '&8Mensagem para {player}&8: &6{message}'
+staffchat:
+ format: '&6[SC] {player}&f: {message}'
+warning:
+ format: '&6[AVISO] &f{message}'

@@ -1,0 +1,5 @@
+name: RedeSkySkins
+version: 1.0
+authors: [RedeSky]
+
+main: net.redesky.skins.bukkit.Main

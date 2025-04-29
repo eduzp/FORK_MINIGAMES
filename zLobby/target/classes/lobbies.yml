@@ -1,0 +1,12 @@
+title: 'Lobbies'
+rows: 3
+items:
+  lobby1:
+    slot: 10
+    icon: 'STAINED_GLASS_PANE : 1 : 13 : 1 : nome>&aLobby #01 : desc>&fJogadores: &a{players}&7/&c{maxplayers}\n \n{description}'
+    max-players: 50
+    servername: 'ascenty-01.destinyhost.com.br:25741 ; lobby'
+messages:
+  description:
+    current: '&bVocê está aqui.'
+    connect: '&aClique para entrar!'

@@ -1,0 +1,59 @@
+# Executáveis:
+# CORE>jogos
+# CORE>perfil
+# CORE>jogadores
+# SKYWARS>loja
+# SKYWARS>lobbies
+# SKYWARS>kits
+# SKYWARS>espectar
+# SKYWARS>jogar
+# SKYWARS>sair
+# COMANDO>exemplo
+# MENSAGEM>&aExemplo
+lobby:
+ bussola:
+  slot: 1
+  execute: 'CORE>jogos'
+  icon: 'COMPASS : 1 : nome>&bServidores'
+ perfil:
+  slot: 2
+  execute: 'CORE>perfil'
+  icon: '%perfil%SKULL_ITEM:3 : 1 : nome>&bPerfil'
+ loja:
+  slot: 6
+  execute: 'SKYWARS>loja'
+  icon: 'MAGMA_CREAM : 1 : nome>&bVendinha'
+ jogadores:
+  slot: 8
+  execute: 'CORE>jogadores'
+  icon: 'INK_SACK:%zcore_status_jogadores_inksack% : 1 : nome>&bJogadores: %zcore_status_jogadores_nome%'
+ lobbies:
+  slot: 9
+  execute: 'LOBBY>lobbies'
+  icon: 'NETHER_STAR : 1 : nome>&bSelecionar Lobby'
+waiting:
+ kits:
+  slot: 3
+  execute: 'SKYWARS>kits'
+  icon: 'CHEST : 1 : nome>&bSelecionar Kit'
+ perks:
+  slot: 6
+  execute: 'SKYWARS>habilidades'
+  icon: 'EXP_BOTTLE : 1 : nome>&bSelecionar Habilidade'
+ sair:
+  slot: 9
+  execute: 'SKYWARS>sair'
+  icon: 'BED : 1 : nome>&cSair'
+spectator:
+ compass:
+  slot: 5
+  execute: 'SKYWARS>espectar'
+  icon: 'COMPASS : 1 : nome>&bJogadores Vivos'
+ jogar:
+  slot: 1
+  execute: 'SKYWARS>jogar'
+  icon: 'PAPER : 1 : nome>&bJogar Novamente'
+ sair:
+  slot: 9
+  execute: 'SKYWARS>sair'
+  icon: 'BED : 1 : nome>&cSair'

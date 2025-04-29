@@ -1,0 +1,7 @@
+name: zSlime
+version: 1.0
+main: mc.twilight.slime.SlimeJumps
+commands:
+    config:
+        description: Comando de configuração do SlimeJumps
+        usage: /config

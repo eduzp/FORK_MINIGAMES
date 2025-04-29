@@ -1,0 +1,6 @@
+author: eduzp
+name: zUtilidades
+version: Twilight Version
+depend: [zCore]
+
+main: mc.twilight.utilidades.Main

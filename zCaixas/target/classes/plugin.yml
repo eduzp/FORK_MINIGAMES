@@ -1,0 +1,6 @@
+author: eduzp
+name: zCaixas
+version: Twilight Version
+depend: [zCore]
+
+main: mc.twilight.caixas.Main

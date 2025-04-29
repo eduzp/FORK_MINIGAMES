@@ -1,0 +1,6 @@
+author: eduzp
+name: zLobby
+version: Twilight Version
+depend: [zCore]
+
+main: mc.twilight.lobby.Main

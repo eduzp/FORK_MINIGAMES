@@ -1,0 +1,51 @@
+# Executáveis:
+# CORE>jogos
+# CORE>perfil
+# CORE>jogadores
+# BEDWARS>loja
+# BEDWARS>lobbies
+# BEDWARS>espectar
+# BEDWARS>jogar
+# BEDWARS>sair
+# COMANDO>exemplo
+# MENSAGEM>&aExemplo
+lobby:
+  bussola:
+    slot: 1
+    execute: 'CORE>jogos'
+    icon: 'COMPASS : 1 : nome>&bServidores'
+  perfil:
+    slot: 2
+    execute: 'CORE>perfil'
+    icon: '%perfil%SKULL_ITEM:3 : 1 : nome>&bPerfil'
+  loja:
+    slot: 6
+    execute: 'BEDWARS>loja'
+    icon: 'MAGMA_CREAM : 1 : nome>&bVendinha'
+  jogadores:
+    slot: 8
+    execute: 'CORE>jogadores'
+    icon: 'INK_SACK:%zcore_status_jogadores_inksack% : 1 : nome>&bJogadores: %zcore_status_jogadores_nome%'
+  lobbies:
+    slot: 9
+    execute: 'BEDWARS>lobbies'
+    icon: 'NETHER_STAR : 1 : nome>&bSelecionar Lobby'
+
+waiting:
+  sair:
+    slot: 9
+    execute: 'BEDWARS>sair'
+    icon: 'BED : 1 : nome>&cSair'
+spectator:
+  compass:
+    slot: 5
+    execute: 'BEDWARS>espectar'
+    icon: 'COMPASS : 1 : nome>&bJogadores Vivos'
+  jogar:
+    slot: 1
+    execute: 'BEDWARS>jogar'
+    icon: 'PAPER : 1 : nome>&bJogar Novamente'
+  sair:
+    slot: 9
+    execute: 'BEDWARS>sair'
+    icon: 'BED : 1 : nome>&cSair'

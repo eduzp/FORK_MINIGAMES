@@ -1,0 +1,14 @@
+database:
+ tipo: 'MySQL'
+ mysql:
+  hikari: false
+  mariadb: false
+
+  host: '...'
+  porta: '3306'
+  nome: ''
+  usuario: '...'
+  senha: ...
+
+ mongodb:
+   url: ''

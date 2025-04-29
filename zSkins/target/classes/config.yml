@@ -1,0 +1,34 @@
+
+#
+# redesky.cmd.skin - Permissão para usar o /skin [nome].
+# redesky.bypass.cooldown - Permissão para ignorar o cooldown.
+#
+
+bungeecord: false
+
+database:
+ # Tipos de bancos de dados disponíveis atualmente: MySQL, SQLite
+ tipo: 'SQLite'
+
+ sqlite:
+  # Localização do arquivo do SQLite
+  arquivo: plugins/RedeSky/skins.db
+
+ mysql:
+  # Host para acessar o MySQL
+  host: 'localhost'
+  # Porta para acessar o MySQL
+  porta: '3306'
+  # Nome do banco de dados no MySQL
+  nome: 'server'
+  # Usuário de acesso ao MySQL
+  usuario: 'root'
+  # Senha de acesso ao MySQL
+  senha: ''
+
+# OBS: O número máximo não passa de 21 e não pode ser menor que 1
+groups:
+ # permissão 'role.master' ter o máximo de 21 skins
+ - 'role.master > 21'
+ # permissão 'role.membro' ter o máximo de 3 skins
+ - 'role.membro > 3'

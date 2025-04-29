@@ -1,0 +1,6 @@
+author: eduzp
+name: zCosmeticos
+version: Twilight Version
+depend: [zCore]
+
+main: mc.twilight.cosmeticos.Main

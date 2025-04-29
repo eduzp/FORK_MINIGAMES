@@ -1,0 +1,134 @@
+package mc.twilight.cosmeticos.cosmetics.types;
+
+import mc.twilight.cosmeticos.cosmetics.Cosmetic;
+import mc.twilight.cosmeticos.cosmetics.CosmeticType;
+import mc.twilight.cosmeticos.hook.player.CUser;
+import mc.twilight.core.utils.BukkitUtils;
+import mc.twilight.core.utils.enums.EnumRarity;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class BalloonCosmetic extends Cosmetic {
+  
+  private final String icon;
+  private final List<String> frames;
+  
+  public BalloonCosmetic(String name, EnumRarity rarity, String icon, String... frames) {
+    super(name, rarity, CosmeticType.BALLOON);
+    this.icon = icon;
+    this.frames = Arrays.asList(frames);
+    Cosmetic.addCosmetic(this);
+  }
+  
+  public static void setupBalloons() {
+    new BalloonCosmetic("Caveira Vermelha", EnumRarity.COMUM,
+        "SKULL_ITEM:3 : 1 : nome>Caveira Vermelha : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Caveira Vermelha.",
+        "eyJ0aW1lc3RhbXAiOjE1MTI1OTM3NDg3NzUsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2NiODUyYmExNTg0ZGE5ZTU3MTQ4NTk5OTU0NTFlNGI5NDc0OGM0ZGQ2M2FlNDU0M2MxNWY5ZjhhZWM2NWM4In19fQ==");
+    new BalloonCosmetic("Bola de Praia", EnumRarity.COMUM, "SKULL_ITEM:3 : 1 : nome>Bola de Praia : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Bola de Praia.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDQ2NzkwNTUsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2QzMTVmY2I1YjI4MGMzNDhjNjczYmE2YWVlMjZiMzRmOTFhZDQ4NDYxZjQ1MWM3MzU2YjI2NTNlOWY3Y2NjIn19fQ==");
+    new BalloonCosmetic("Corações", EnumRarity.COMUM, "SKULL_ITEM:3 : 1 : nome>Corações : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Corações.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDUxNTcxMDIsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzgyNTZmZDE2ZjJkZWZlNDNiOWQ0OTgyODVjZmRiNDFlMmJjZGQxMWQxYmQwNzg3OWNhODU5ZjM3NTIzZSJ9fX0=");
+    new BalloonCosmetic("Relíquia", EnumRarity.COMUM, "SKULL_ITEM:3 : 1 : nome>Relíquia : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Relíquia.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDU0OTg3MjksInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzZhZDZhODk0NWRiZjVjMjJlNzlmZjk0YTk1OTRhNThmYjEzNDkzYzJiNTdmZDQ1ZTU1ZTE4NGRkNjJjMSJ9fX0=");
+    new BalloonCosmetic("Pneu", EnumRarity.COMUM, "SKULL_ITEM:3 : 1 : nome>Pneu : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Pneu.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDU3MDM2ODMsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzQ4NDcyOWE2MzgwZTE0YzI2NjBiNGYwN2U2MmQxMmM2Mzk5ZjM0YjQ4ODgyYWFlZDliZGU3MWI1M2FhZTdkNSJ9fX0=");
+    new BalloonCosmetic("Livros", EnumRarity.RARO, "SKULL_ITEM:3 : 1 : nome>Livros : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Livros.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDQ3NDc0MTksInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzgxYWE1NDIyMWY3MGQ3ZmZhZjJjNGY2NjhmNDY2ZTE3Y2Q0N2IyNzM5Zjg0YmFiZWU5MmQ2ZGI5MWEyNmQ4ZSJ9fX0=");
+    new BalloonCosmetic("Reator Fundido", EnumRarity.RARO, "SKULL_ITEM:3 : 1 : nome>Reator Fundido : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Reator Fundido.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDQ4MTU2ODcsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzc5MTFhOThhYjE2MjUwZjlkYWRkMGMyYjkwZGVjNDVhZmM2MGZiMTU2YWNkYmI0ZmQ2Nzc2MGU3NDcxMGE5In19fQ==");
+    new BalloonCosmetic("Cubo", EnumRarity.RARO, "SKULL_ITEM:3 : 1 : nome>Cubo : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Cubo.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDQ4ODQwMDAsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzRmNjI1NGI2NGY5M2E1OGE2MmE4ZjMyZGE4NGE1Y2IwZmE2OWJjMzZhYTQ0ZDI2ZDU1MzUxYjc3YWMzZTE0MzAifX19");
+    new BalloonCosmetic("Fusão", EnumRarity.RARO, "SKULL_ITEM:3 : 1 : nome>Fusão : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Fusão.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDQ5NTIyNjksInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzcwODdmYzM3MDNmNjU5YjI4NTk2N2FiODM0NjA3NzI4YjE0MDE2ZjcyZjliMjI1ZjVlYTJhODE4NjljNTMifX19");
+    new BalloonCosmetic("Globo", EnumRarity.RARO, "SKULL_ITEM:3 : 1 : nome>Globo : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Globo.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDUwMjA1ODIsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzFhZTBmM2FlNjg4YjViODU4YmE0YzMyZTAzMGU1NzJkYTRkZjk2ODRkNWE1N2M3YjYzOWFlZDM2ZjdiOTNjYyJ9fX0=");
+    new BalloonCosmetic("Verde Fractal", EnumRarity.RARO, "SKULL_ITEM:3 : 1 : nome>Verde Fractal : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Verde Fractal.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDUwODg4NTQsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzQ1NWUxMGRkYzRiYzE3MjM3YzQ3YjJkOTA1MTQ3NzRhMjk1Nzc3ZTc2NTc4ZDRhYzE2MjM5YmYyMTM4NyJ9fX0=");
+    new BalloonCosmetic("Magikarp", EnumRarity.RARO, "SKULL_ITEM:3 : 1 : nome>Magikarp : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Magikarp.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDUyOTM3ODQsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2E4ODNmZGQyMzI3YjZmZDI2ZGNiNjViZmIxYjI2ZmYwODcyNDU1YjNkZGYzYTBkMDE5ODhmOWU4NGE0MWFlIn19fQ==");
+    new BalloonCosmetic("Kit Médico", EnumRarity.RARO, "SKULL_ITEM:3 : 1 : nome>Kit Médico : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Kit Médico.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDUzNjIwOTUsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVjYTEzODQ3MmY5YThjYTRjYmZkOWNhNjIyMGZkMTc2NTYxZWIwMTJkYjUyYWE5YTRmZWI4MWRhNmM1NjFhIn19fQ==");
+    new BalloonCosmetic("Arco-íris", EnumRarity.RARO, "SKULL_ITEM:3 : 1 : nome>Arco-íris : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Arco-íris.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDU0MzA0MzYsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzIxZjJlM2FjMDU4MjkyYjVkOTU3YTczZjZlMjU2NTQyNzc3YzNjZDcwNDM2Yzg0Nzg3N2RkNzhlMzc4ZSJ9fX0=");
+    new BalloonCosmetic("Cubo Mágico", EnumRarity.RARO, "SKULL_ITEM:3 : 1 : nome>Cubo Mágico : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Cubo Mágico.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMwNDU1NjY5NzksInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzc4MjhjMjdiODBjYWQ5ZjM0NTZiZWJmNmMzZDhmZDUxZDFiNzE0NDgwZWRiZDFjYjVjYTJjOTNjODQ2NjcifX19");
+    new BalloonCosmetic("Cesta de Páscoa", EnumRarity.RARO,
+        "SKULL_ITEM:3 : 1 : nome>Cesta de Páscoa : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Cesta de Páscoa.",
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODNjMjVhN2ExODgxOTZiMTg3MTcyNjRmZmU4MzdjYTM0OGNmNzE5ZTgyNzE3OWVkYzRiNzhjYmNiOGM3ZGQ4In19fQ==");
+    new BalloonCosmetic("Galinha Gorda", EnumRarity.EPICO, "SKULL_ITEM:3 : 1 : nome>Galinha Gorda : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Galinha Gorda.",
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2YzN2Q1MjRjM2VlZDE3MWNlMTQ5ODg3ZWExZGVlNGVkMzk5OTA0NzI3ZDUyMTg2NTY4OGVjZTNiYWM3NWUifX19");
+    new BalloonCosmetic("Nuvens", EnumRarity.EPICO, "SKULL_ITEM:3 : 1 : nome>Nuvens : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Nuvens.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDQ3NzA0MTUsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzYzNDNlZGU4NTI0MDBmNWE3ZWNmMWRhNGE5NTZhZmZkNWE3YTE0MzE3NzAzY2MyZDM1MWFmYzkzMmRhNjYifX19",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDQ4Mzg3MjcsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Q3ZGUyNjRjNDk0NDg2NzNmYzY5MWVmZTNlYTk0N2ZhYjYxMzExOGUxY2FkZDc1NWM2NDVlNGJiYmE1M2EifX19",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDQ2MzM3ODMsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2E0YmU3ZTI4NGMxZmM5OTYzYTBlMzVjOTU5YTE1NWRhZjAxYTZiMmI1MjMzNjRiYmU1YmFmYmQ3OWYxNjg4In19fQ==",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDQ3MDIxMzgsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2E4MjFiOWYyYTJkYzYxYTMzODFhZTRhMzQ1MzliZmNjZmM1MDhlMTcxYTE0NDc0MDVhODc2YzdjZDkyM2MzY2YifX19");
+    new BalloonCosmetic("Ondas", EnumRarity.EPICO, "SKULL_ITEM:3 : 1 : nome>Ondas : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Ondas.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDQ5MDcwMTUsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2YxZmQ5MDY4MzhlMGRiNmIzOGVmYjM5MDcxZWE0N2MzMmU0ODk4Nzc0NDMzOWNmMjgzZGY1M2E3ZDYyNGIifX19",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDQ5NzUzMDgsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzZlMTFlZDkxMTI4YTZlNTA1ZDgxMTBmYWE1NmI2M2YwOGE2MDY0OGFlZDg4Zjc2YjllM2FmZTJlNDA1Y2RlNjUifX19",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDUwNDM2MDUsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzU2ZjFjZmQ4NTYwYTFjYjhiNGRmODJjZjI1MmRlZTA1ZTgyYmIxOGQ1ODMzNDlkNTQ2NTVkOTRlMDE5ZjE1MCJ9fX0=",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDUxMTE4NTIsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzlhZWQyZWJiZmIzYTQ4NWY2NDEzZjczMzU3MDI2N2FiZDFkNTE0NDFjYTNkMmU0NmVjN2Q3OWM4YTdhOTcifX19");
+    new BalloonCosmetic("Discoteca", EnumRarity.EPICO, "SKULL_ITEM:3 : 1 : nome>Discoteca : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Discoteca.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDUxODA1NjcsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzdhYjk3NTViNGFhNGFkNmQ0NDVhNzVhMDlmZWNjMThiNzZiNWQxMjdmZjE3M2Y0YWI0ZmUzYTA5MWM4NiJ9fX0=",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDUyNDg4NzYsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzUzOGE2YzhkODBjNDgzZjk5ODFjNjQ3N2JjOWVhNWYwMjNhNmNlOWIyYTM5NWU0YmExYjVkY2VhM2U4YzJiYWYifX19",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDUzMTcxODgsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2YyMjk5ODQwYTFiOTExMjM1NzU4NWEyYzEzMTQ2MGRkMmRkOTRhMjQ4ZDdkMzM2NDcwZmFmOTMwNmIxNDE4NzYifX19",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDUzODU0NjksInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2ZkZmNlZDYxM2M1N2NlY2ViMTRlNjg5OTdhZjM5YjYyNjdkMDU4MTIyZDg0NWE4MzNjM2U4MjViMWRhZTA1MSJ9fX0=");
+    new BalloonCosmetic("Lava", EnumRarity.EPICO, "SKULL_ITEM:3 : 1 : nome>Lava : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Lava.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDU3MjcxOTYsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzczNGQzZjQ2NjQ4YTZiZjVlMzdjNjFkMmNiNzVhNmI4ZTI0NTExODExMWI5YzYwMzE0NTg4ZWYwNzMzM2U4In19fQ",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDU3OTU0ODUsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzcyMzljODlhMWIwMjgxMzlmMTljMWRlZDEzY2I3MTAyYTNkMzRmMmY3MDE1NTc0ZGU4NzM0NjNhMGQ2ZjEifX19",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDU4NjM4MDAsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2FiNTI0ODZiMmMzZjZmYzk3Njg1NTRiMWNiYmFlYjk0ZWNhMjcyZDJmY2E1NTViMzY1MTVhZjE0OTY2N2IifX19",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDU5MzIxNjQsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2UxYjNlMWFkMjJkZmUzNWRjNGZlMWVkZTAyZmNmNWJmNDRjMjg3NDdlYmI2MWQ4NGU1ZGQ0MTNiNTk5ODdlIn19fQ==");
+    new BalloonCosmetic("Mais Arco-íris", EnumRarity.EPICO, "SKULL_ITEM:3 : 1 : nome>Mais Arco-íris : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão Mais Arco-íris.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDYyNzY2MTAsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzdjMjFmMDMxYmNjM2Q3ZDFmMTYyZDQzODFmOTZmNjU1MGU2ODRjZDFmNzQ3YzczOGY0OTYyNGE5MjQ3NmJjIn19fQ==",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDgxODA4MDYsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzM5OTBmODM4NmU1NzVjMzI2ZDhlYTEzYzFlMTRjNDM2NTMyZjU5NTIxOTFkZmQ2Y2I3NTk0YjE0MjQ2YWJiIn19fQ==",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDg3NjE3MzUsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2MzZjVmMGNhYTVhOWZlNzc2Zjg1YWNhZWJmYWY3YmNmMTg4YjkzNjFjZGUwOGY5YWU4OWQxYTM4MzBiOTJlIn19fQ==",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDY1MTIwNDUsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzk4ZTcxMmZjNWY0ODEyOWU1M2UzNzRjNWVhNjVlY2E1ZTRhNmQyNjk2NWE3NDIzNzdiNTU5M2FiZDZkZWYyIn19fQ==");
+    new BalloonCosmetic("Gosmento", EnumRarity.EPICO, "SKULL_ITEM:3 : 1 : nome>Gosmento : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão Gosmento.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDY1ODIxMjcsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2RiYTQ0YTU2YzI2NzVkNjQ3Nzg4NTEzZjlmOWFlN2E1OGJhY2RiM2ZjZmI5ZWY4YTU5Mzc2ODkxNzJiYTgifX19",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDY2NTA0ODMsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2U3NWM4N2JiMWM0NWM0ZmNiZGJkYmI5YWQ4MThmY2E5OWY1ODJiOThlMWMwNjgzOTQ5MWY3NmVmY2ZkMjRlYzgifX19",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDY3MTg4MTUsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2YzNmFkNTViNWU5NDQ5ZTk5NmM1ZDdmNzQ5ZDdmMzQ0Njc5ZDdkNWUyNGM3ZjA5NjI4ODg0MjM1YiJ9fX0=",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDY3ODcyNDgsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzdhNTRhZGEzNGFiY2Y2ZjJhMWJkZGFlYTExZmM3MjFlMjRkYjE1YmFjMzEzN2IxMmRjYTczMjQ2MTQyMDNiNmUifX19");
+    new BalloonCosmetic("Coelho da Páscoa", EnumRarity.EPICO,
+        "SKULL_ITEM:3 : 1 : nome>Coelho da Páscoa : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Coelho da Páscoa.",
+        "eyJ0aW1lc3RhbXAiOjE1MjIyMDg2NTQ0NjEsInByb2ZpbGVJZCI6IjdkYTJhYjNhOTNjYTQ4ZWU4MzA0OGFmYzNiODBlNjhlIiwicHJvZmlsZU5hbWUiOiJHb2xkYXBmZWwiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2M5YTI2Y2M4NWI4OWI5NmE3YTgxYjA4MjdjMTM5ZjVjYzY0OGU0MzhjYjNmZGFmZDk5YTkwMzNiZTM1YyJ9fX0=",
+        "eyJ0aW1lc3RhbXAiOjE1MjIyMDg2NzgxNzMsInByb2ZpbGVJZCI6IjdjZjc2MTFkYmY2YjQxOWRiNjlkMmQzY2Q4NzUxZjRjIiwicHJvZmlsZU5hbWUiOiJrYXJldGg5OTkiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2QxZWNiZDM5MWIzNzMxOWI4YjgzNmU0NzQyYjZlZTFjNTcxZWM3NDc4NmU5MWU3YjI0Zjk5OWUzNGJhZmU2YWQifX19");
+    new BalloonCosmetic("Oi!", EnumRarity.DIVINO, "SKULL_ITEM:3 : 1 : nome>Olá! : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão Olá!.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDU0NTM3MjEsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2U2Yjg1Y2YyNWUxNzNjNTdiODlhZTFkMjIzYjZmN2RmYzMyZGQ4YjkyMTFmNmRmMjdiNGVjZThlMDY3NDVhZSJ9fX0=",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDU1MjIwNzAsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2JmOTUyNGI1MTc5MzRhYmRiNzY5MDIwYmE1ZTNjZjVkMTFkZWJmZTMzMTU5OTFhMTY1Y2Q3M2Y4YzE3OGRhIn19fQ==",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDU1OTA1MjMsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzM2NDdiMjhkMzIzOTVmYWY0ZWQxMzUyM2JhODMzOGMyMjQ2ZjA3MDJkM2QzM2Q5ZTUxZmNmZTljMThkMzQifX19",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDU2NTg4NjcsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzI3N2EzOWNkZDBlZWIyYTQ5NWJiMTBjMjFjN2UyZGY4ZDNmMTVkZTM4MWExNWIyZDdkY2QyYzA5ZjZiMTdmZCJ9fX0=");
+    new BalloonCosmetic("Bolinhas", EnumRarity.DIVINO, "SKULL_ITEM:3 : 1 : nome>Bolinhas : desc>&7Divirta-se pelos nossos lobbies\n&7com um balão de Bolinhas.",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDYwNzA2NjcsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzUyYWYzNWY0Njk4MWJhMzE3ZTc2NjE3ODFiNzdiZGQ0NzEzMTNjN2QyNmM1ZjNmMTllM2IwM2UyNTc0ZTIifX19",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDYxMzg5NjYsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzc3Y2FhMjg4N2U5MWI5MjU5MDNkYjVhZjdlOWRmZmQ4YzdiNzRlZmE2YTBhYjU0OTJjYmVjM2M4ZGM2MGZhIn19fQ==",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDYyMDc2MTAsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2U3YjhiNDYwYjhhNTgyYWEyNDI5Zjg5MDdhYzY5ZjYzOGM5NzhmNzFlMjA4ZTYzN2UzYjJjOTliMDNjNjIifX19",
+        "eyJ0aW1lc3RhbXAiOjE1MTMzMDYwMDIyNjcsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzFiM2Q2NmFlNGQ0NDE5ZjI3YTBlNThjMzU4Yzg5YTM5MWFjZjZmMjgxZDA0NjVmMTkzMjRiZmU2NzFlZGRlOCJ9fX0=");
+  }
+  
+  @Override
+  public void onSelect(CUser user) {
+    user.handleBalloon();
+  }
+  
+  public List<String> listFrames() {
+    return this.frames;
+  }
+  
+  public ItemStack getIcon(String color, String... loreList) {
+    return this.getIcon(color, Arrays.asList(loreList));
+  }
+  
+  public ItemStack getIcon(String color, List<String> loreList) {
+    ItemStack icon = BukkitUtils.deserializeItemStack(this.icon + " : skin>" + this.frames.get(0));
+    ItemMeta meta = icon.getItemMeta();
+    meta.setDisplayName(color + meta.getDisplayName());
+    List<String> currentLore = meta.getLore();
+    currentLore.add("");
+    currentLore.add("§fRaridade: " + this.getRarity().getName());
+    currentLore.addAll(loreList);
+    meta.setLore(currentLore);
+    icon.setItemMeta(meta);
+    return icon;
+  }
+}
