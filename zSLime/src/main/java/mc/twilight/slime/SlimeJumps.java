@@ -5,7 +5,7 @@ import mc.twilight.slime.listeners.PlayerListeners;
 import mc.twilight.slime.runnables.JumpPadsRunnable;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class SlimeJumps extends JavaPlugin {
+public class main extends JavaPlugin {
 
     public static SlimeJumps slimeJumps;
 
