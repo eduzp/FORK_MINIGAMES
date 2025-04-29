@@ -14,10 +14,8 @@ public class SlimeJumps extends JavaPlugin {
         
         slimeJumps = this;
 
-        System.out.println("------------------");
-        System.out.println("Slime-JumpPads");
-        System.out.println("ACTIVATED");
-        System.out.println("------------------");
+        System.out.println("zSlimes");
+        System.out.println("Ativado");
 
         getConfig().options().copyDefaults(true);
         saveConfig();
@@ -42,10 +40,7 @@ public class SlimeJumps extends JavaPlugin {
         
         slimeJumps = this;
         
-        System.out.println("------------------");
-        System.out.println("Slime-JumpPads");
-        System.out.println("DESACTIVATED");
-        System.out.println("------------------");
+        System.out.println("[zSlime] DESATIVADO");
         
     }
     
